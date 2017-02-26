@@ -27,11 +27,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Seach"
+            android:onClick= "ApplySearch"
             android:layout_weight="2"/>
     </LinearLayout>
-    <GridView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/llSearch"
-        android:id="@+id/gvArticles"></GridView>
+        android:id="@+id/gvArticles"></android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

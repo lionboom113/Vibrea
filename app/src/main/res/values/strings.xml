@@ -3,4 +3,11 @@
     <string name="api_key">7fe086c436c64864822e01f52e029cde</string>
     <string name="base_url">https://api.nytimes.com</string>
     <string name="image_prefix">http://www.nytimes.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="sort_type">
+        <item>Oldest</item>
+        <item>Newest</item>
+    </string-array>
 </resources>

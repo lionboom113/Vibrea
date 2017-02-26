@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="enquilear.enquilear.com.vibrea">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SortDefineActivity" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>
