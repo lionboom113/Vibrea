@@ -11,45 +11,54 @@
     android:orientation="vertical"
     tools:context="enquilear.enquilear.com.vibrea.SortDefineActivity">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:weightSum="10"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="5"
             android:text="Begin Date"/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="showDatePickerDialog"
+            android:layout_weight="5"
             android:id="@+id/etDatePicker"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="1"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvSortOrder"
+            android:layout_weight=".5"
             android:text="Sort Order"/>
         <Spinner
             android:id="@+id/spSortType"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight=".5"
             android:layout_height="wrap_content"></Spinner>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:weightSum="1"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvDeskValue"
+            android:layout_weight=".5"
             android:text="News Desk Values"/>
         <LinearLayout
             android:layout_toLeftOf="@+id/tvDeskValue"
             android:layout_width="wrap_content"
             android:orientation="vertical"
+            android:layout_weight=".5"
             android:layout_height="wrap_content">
             <CheckBox
                 android:layout_width="wrap_content"

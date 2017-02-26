@@ -33,11 +33,23 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
     private List<Doc> mDocs;
     // Store the context for easy access
     private Context mContext;
+    public int currPage = 0;
 
     // Pass in the contact array into the constructor
     public ArticleAdapter(Context context, List<Doc> docs) {
         mDocs = docs;
         mContext = context;
+    }
+     public void addItems(List<Doc> items){
+         mDocs.addAll(items);
+         notifyDataSetChanged();
+         currPage++;
+     }
+
+    public void clearData(){
+        mDocs.clear();
+        notifyDataSetChanged();
+        currPage = 0;
     }
 
     // Easy access to the context object in the recyclerview
@@ -47,7 +59,13 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
 
     private void setContentToViewHolder(ViewHolder vh, Doc article) {
         if (article.getMultimedia().size() > 0) {
+            vh.articleImage.setVisibility(View.VISIBLE);
+            Log.d("tuan","visible");
             setImageToImageViewFromPath(vh.articleImage, article.getMultimedia().get(0).getUrl());
+        } else {
+            Log.d("tuan","invisible");
+            vh.articleImage.setImageResource(R.drawable.placeholder);
+            vh.articleImage.setVisibility(View.INVISIBLE);
         }
         vh.snippet.setText(article.getSnippet());
     }

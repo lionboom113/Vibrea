@@ -12,7 +12,7 @@ import retrofit2.http.Query;
 
 public interface NYTimesAPI {
     @GET("svc/search/v2/articlesearch.json?apikey=7fe086c436c64864822e01f52e029cde")
-    Call<ArticleWrapper> findArticleAll(@Query("begin_date") String beginDate,@Query("fq") String categories, @Query("sort")String sortType);
+    Call<ArticleWrapper> findArticleAll(@Query("begin_date") String beginDate,@Query("fq") String categories, @Query("sort")String sortType, @Query("page")int page);
     @GET("svc/search/v2/articlesearch.json?apikey=7fe086c436c64864822e01f52e029cde")
-    Call<ArticleWrapper> findArticle(@Query("q") String query,@Query("begin_date") String beginDate,@Query("fq") String categories, @Query("sort")String sortType);
+    Call<ArticleWrapper> findArticle(@Query("q") String query,@Query("begin_date") String beginDate,@Query("fq") String categories, @Query("sort")String sortType,@Query("page")int page);
 }
